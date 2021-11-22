@@ -30,7 +30,9 @@ set -eu -o pipefail
 main "$@"
 fi
 ```
-Above is a CITAS script that checks any shellscripts you might have for errors, so you can start out knowing if you're shellscripts are bad, and if they are bad it's safe to say you're going to have trouble with a proper deployment, even say if you're branch flipping.
+## Branch Flipping and CITAS
+
+Above is a CITAS script that checks any shellscripts you might have for errors, so you can start out knowing if you're shellscripts are bad, and if they are bad it's safe to say you're going to have trouble with a proper deployment, even say if you're branch flipping:
 
 >>![flo2 drawio](https://user-images.githubusercontent.com/20936398/142931905-59b78a52-fd78-4a75-9386-7826b1d63488.png)
 
