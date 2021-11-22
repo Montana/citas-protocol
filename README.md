@@ -27,6 +27,7 @@ ssh apps@$IP -p $PORT <<EOF
   crystal build --release --no-debug index.cr # Change to whatever commands you need!
 EOF
 ```
+Okay, so it seems like we now have all of our pieces to start with the CITAS protocol, we know what we are going to deploy with, our `deploy.sh` file, and hopefully a provider to complete the **CITAS** acronym. Here's a flowchart below I've created showing the CITAS protocol method flow:
 
 ![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142917731-c446cba0-17ba-4215-9201-4fa920616312.png)
 
