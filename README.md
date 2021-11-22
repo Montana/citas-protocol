@@ -8,6 +8,26 @@ The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot 
 
 It helps diagnose a problem with a `.travis.yml` configuration, or maybe a 3rd party configuraiton, like Quay, OpenShift or Docker. It's a simple "trace your tracks" method in diagnosing errors, builds that fail, queues, etc. 
 
+Let's start with your `deploy.sh` file, this will tell Travis where and what to deploy your application to, here's mine - your `deploy.sh` file will be different: 
+
+```bash
+#!/bin/bash
+
+eval "$(ssh-agent -s)" # start ssh-agent cache
+chmod 600 .travis/id_rsa # allow read access to the private key
+ssh-add .travis/id_rsa # add the private key to SSH (Crucial in the CITAS Protocol) 
+
+git config --global push.default matching
+git remote add deploy ssh://git@$IP:$PORT$DEPLOY_DIR
+git push deploy master
+
+# you can skip this command if you don't need to execute any additional commands after deploying.
+ssh apps@$IP -p $PORT <<EOF
+  cd $DEPLOY_DIR
+  crystal build --release --no-debug index.cr # Change to whatever commands you need!
+EOF
+```
+
 ![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142917731-c446cba0-17ba-4215-9201-4fa920616312.png)
 
 An example of this in action would be this `.travis.yml` file I created, in the example we use the CITAS protocol to build an Android application: 
