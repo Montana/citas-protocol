@@ -4,6 +4,10 @@
 
 The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI. **CITAS** stands for **Controlling Integrations Through Application Services**. Here's an example of CITAS: 
 
+## Purpose of the CITAS Protocol? 
+
+It helps diagnose a problem with a `.travis.yml` configuration, or maybe a 3rd party configuraiton, like Quay, OpenShift or Docker. It's a simple "trace your tracks" method in diagnosing errors, builds that fail, queues, etc. 
+
 ![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142917731-c446cba0-17ba-4215-9201-4fa920616312.png)
 
 An example of this in action would be this `.travis.yml` file I created, in the example we use the CITAS protocol to build an Android application: 
