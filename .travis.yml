@@ -13,3 +13,4 @@ script:
 - uname -r
 - systemd-analyze time
 - systemd-analyze blame
+- echo "The CITAS Protocol PoC"
