@@ -2,11 +2,11 @@ dist: trusty
 language: bash
 
 before_install:
-    - sudo apt-add-repository "deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse"
+    - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
     - sudo apt-get -qq update
-    - sudo apt-get -t trusty-backports install shellcheck
+    - sudo apt-get -t $(lsb_release -sc) install shellcheck
     - sudo pip install bashate
 
 script:
-- /bin/bash tests/shellcheck.sh
-- /bin/bash tests/bashate.sh
+- chmod u+x tests/shellcheck.sh
+- chmod u+x tests/bashate.sh
