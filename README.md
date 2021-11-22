@@ -1,5 +1,7 @@
 # The CITAS Protocol 
 
+[![Build Status](https://app.travis-ci.com/Montana/citas-protocol.svg?branch=master)](https://app.travis-ci.com/Montana/citas-protocol)
+
 The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI. **CITAS** stands for **Controlling Integrations Through Application Services**. Here's an example of CITAS: 
 
 ![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142917731-c446cba0-17ba-4215-9201-4fa920616312.png)
