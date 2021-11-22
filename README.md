@@ -76,6 +76,9 @@ Let's make sure through the CLI OpenShift is installed and configured, now confi
 ```bash
 travis env set OPENSHIFT_TOKEN <token>
 ```
+Now you're setup, below is a diagram of `sc.sh` checking the Bash script, then once accepted, having various callbacks -> then tunnelling into Docker via `env vars`, and spinning up your instance:
+
+![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142947950-c479cb45-3105-4f1a-96c7-ec58039391b1.png)
 
 It will fill in most of the fields. You have the option to encrypt the password, do that. Now, you can replace the field values with environment variables that you can set from Travis CI website. You can do that by going to the settings of your repository.
 
