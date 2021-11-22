@@ -10,5 +10,6 @@ install: skip
 script:
 - cat /etc/os-release
 - uname -a
+- uname -r
 - systemd-analyze time
 - systemd-analyze blame
