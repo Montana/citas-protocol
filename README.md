@@ -2,9 +2,13 @@
 
 [![Build Status](https://app.travis-ci.com/Montana/citas-protocol.svg?branch=master)](https://app.travis-ci.com/Montana/citas-protocol)
 
-The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI. **CITAS** stands for **Controlling Integrations Through Application Services**. Here's an example of CITAS: 
+The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI. **CITAS** stands for **Controlling Integrations Through Application Services**. Here's the full flow of CITAS when perfomed properly: 
 
-## Purpose of the CITAS Protocol? 
+>>![flo2 drawio](https://user-images.githubusercontent.com/20936398/142931905-59b78a52-fd78-4a75-9386-7826b1d63488.png)
+
+
+## Purpose of the CITAS Protocol?
+
 
 It helps diagnose a problem with a `.travis.yml` configuration, or maybe a 3rd party configuraiton, like Quay, OpenShift or Docker. It's a simple "trace your tracks" method in diagnosing errors, builds that fail, queues, etc. 
 
