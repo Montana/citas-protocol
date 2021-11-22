@@ -2,7 +2,35 @@
 
 [![Build Status](https://app.travis-ci.com/Montana/citas-protocol.svg?branch=master)](https://app.travis-ci.com/Montana/citas-protocol)
 
-The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI. **CITAS** stands for **Controlling Integrations Through Application Services**. Here's the full flow of CITAS when perfomed properly: 
+The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI. **CITAS** stands for **Controlling Integrations Through Application Services**. Here's the full flow of CITAS when perfomed properly. You must have something that checks your shellcode, I've attached something called `shellchecker`, this is to minimize confusion in how an error occurs. 
+
+```bash
+#!/bin/bash
+
+SCRIPTDIR="$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd -P)"
+GITROOT="$(readlink -f "${SCRIPTDIR}/../")"
+
+main(){
+(
+cd "${GITROOT}"
+find ./* \
+  \( -iname '*.bash' -or -iname '*.sh' \) \
+  -exec shellcheck "$@" {} +
+)
+}
+
+# set -e 
+# CITAS method of checking for Bash errors
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+# Bash Strict Mode
+set -eu -o pipefail
+
+# set -x
+main "$@"
+fi
+```
+Above is a CITAS script that checks any shellscripts you might have for errors, so you can start out knowing if you're shellscripts are bad, and if they are bad it's safe to say you're going to have trouble with a proper deployment, even say if you're branch flipping.
 
 >>![flo2 drawio](https://user-images.githubusercontent.com/20936398/142931905-59b78a52-fd78-4a75-9386-7826b1d63488.png)
 
