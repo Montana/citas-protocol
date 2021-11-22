@@ -61,4 +61,4 @@ cache:
   - $HOME/.gradle/wrapper/
   - $HOME/.android/build-cache
 ```
-
+This has done exactly what we wanted when it comes to the CITAS protocol. We controlled the integration (using Travis), we used OpenShift as the Application, and Docker as the Service to deploy. Hence the CITAS acronym. 
