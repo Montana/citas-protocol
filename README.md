@@ -63,7 +63,7 @@ EOF
 ```
 Okay, so it seems like we now have all of our pieces to start with the CITAS protocol, we know what we are going to deploy with, our `deploy.sh` file, and hopefully a provider to complete the **CITAS** acronym. Here's a flowchart below I've created showing the CITAS protocol method flow:
 
-![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142917731-c446cba0-17ba-4215-9201-4fa920616312.png)
+>>![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142917731-c446cba0-17ba-4215-9201-4fa920616312.png)
 
 To add the deploy procedure, it’s easier with the Travis CLI if you're following the CITAS protocol, install the gem and run the command, (in this case we are using OpenShift):
 
@@ -78,7 +78,7 @@ travis env set OPENSHIFT_TOKEN <token>
 ```
 Now you're setup, below is a diagram of `sc.sh` checking the Bash script, then once accepted, having various callbacks -> then tunnelling into Docker via `env vars`, and spinning up your instance:
 
-![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142947950-c479cb45-3105-4f1a-96c7-ec58039391b1.png)
+>>![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142947950-c479cb45-3105-4f1a-96c7-ec58039391b1.png)
 
 It will fill in most of the fields. You have the option to encrypt the password, do that. Now, you can replace the field values with environment variables that you can set from Travis CI website. You can do that by going to the settings of your repository.
 
