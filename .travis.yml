@@ -1,7 +1,14 @@
 ---
-language: node_js
-node_js:
-  - 4.0.0
-install:
-  - npm install
-script: npm test
+dist: focal
+language: ruby
+# language: minimal
+group: dev
+arch: arm64
+
+install: skip
+
+script:
+- cat /etc/os-release
+- uname -a
+- systemd-analyze time
+- systemd-analyze blame
