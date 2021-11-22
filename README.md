@@ -1,8 +1,6 @@
 # The CITAS Protocol 
 
-The CITAS Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI.
-
-CITAS stands for **Controlling Integrations Through Application Services**. Here's an example of CITAS: 
+The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI. **CITAS** stands for **Controlling Integrations Through Application Services**. Here's an example of CITAS: 
 
 ![Untitled drawio (1)](https://user-images.githubusercontent.com/20936398/142917731-c446cba0-17ba-4215-9201-4fa920616312.png)
 
@@ -18,7 +16,7 @@ services:
 deploy:
   provider: openshift
   user: "YOU USER NAME"
-  password: "YOUR PASSWORD" # Can be encrypted (recommended by in the CITAS protocol)
+  password: "YOUR PASSWORD" # Can be encrypted (recommended in the CITAS protocol)
   domain: "YOUR OPENSHIFT DOMAIN"
 
 android:
