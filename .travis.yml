@@ -4,9 +4,7 @@ language: bash
 before_install:
     - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
     - sudo apt-get -qq update
-    - sudo apt-get -t $(lsb_release -sc) install shellcheck
-    - sudo pip install bashate
-
+    
 script:
 - chmod u+x tests/shellcheck.sh
 - chmod u+x tests/bashate.sh
