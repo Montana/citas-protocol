@@ -1,10 +1,19 @@
-dist: trusty
-language: bash
+---
+dist: focal
+language: ruby
+# language: minimal
+group: dev
+arch: arm64
 
-before_install:
-    - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
-    - sudo apt-get -qq update
-    
+install: skip
+
 script:
-- chmod u+x tests/shellcheck.sh
-- chmod u+x tests/bashate.sh
+- cat /etc/os-release
+- uname -a
+- uname -r
+- systemd-analyze time
+- systemd-analyze blame
+- echo "The CITAS Protocol PoC"
+
+# - chmod u+x sc.sh 
+# you want the most verbosity when it comes to the CITAS protocol, the whole point of following this is to have a scope of where you started, and where you want it to end successfully
