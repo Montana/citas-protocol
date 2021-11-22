@@ -2,7 +2,7 @@
 
 [![Build Status](https://app.travis-ci.com/Montana/citas-protocol.svg?branch=master)](https://app.travis-ci.com/Montana/citas-protocol)
 
-The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI. **CITAS** stands for **Controlling Integrations Through Application Services**. Here's the full flow of CITAS when perfomed properly. You must have something that checks your shellcode, I've attached something called `shellchecker`, this is to minimize confusion in how an error occurs. 
+The **CITAS** Protocol is a Protocol invented by me using Travis CI, it's a lot like SCRUM, but using Travis CI. **CITAS** stands for **Controlling Integrations Through Application Services**. Here's the full flow of CITAS when perfomed properly. You must have something that checks your shellcode, I've attached something called `shellchecker`, this is to minimize confusion in how an error occurs: 
 
 ```bash
 #!/bin/bash
