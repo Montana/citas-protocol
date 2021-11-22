@@ -37,6 +37,12 @@ To add the deploy procedure, it’s easier with the Travis CLI if you're followi
 travis setup openshift
 ```
 
+Let's make sure through the CLI OpenShift is installed and configured, now configure your secrets: 
+
+```bash
+travis env set OPENSHIFT_TOKEN <token>
+```
+
 It will fill in most of the fields. You have the option to encrypt the password, do that. Now, you can replace the field values with environment variables that you can set from Travis CI website. You can do that by going to the settings of your repository.
 
 An example of this in action would be this `.travis.yml` file I created, in the example we use the CITAS protocol to build an Android application: 
